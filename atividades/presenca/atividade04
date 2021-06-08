@@ -1,0 +1,16 @@
+lado1 = (input('Escreva o Primeiro lado do Triangulo: '))
+lado2 = (input('Escreva o Segundo lado do Triangulo: '))
+lado3 = (input('Escreva o Terceiro lado do Triangulo: '))
+
+lado1 = float(lado1)
+lado2 = float(lado2)
+lado3 = float(lado3)
+
+if lado1 == lado2 and lado2 == lado3:
+    print(f"O triângulo descrito é equilátero, lados: {lado1}, {lado2}, {lado3}")
+
+elif lado1 != lado2 and lado2 != lado3 and lado3 != lado1:
+    print(f"O triângulo descrito é escaleno, lados: {lado1}, {lado2}, {lado3}")
+
+else:
+    print(f"O triângulo descrito é isósceles, lados: {lado1}, {lado2}, {lado3}")
