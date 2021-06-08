@@ -1,0 +1,10 @@
+import random
+
+numeros = list(range(1,61))
+
+random.shuffle(numeros)
+
+result = numeros[0:6:1]
+
+result.sort()
+print(f'Os números sorteados são {result}')
