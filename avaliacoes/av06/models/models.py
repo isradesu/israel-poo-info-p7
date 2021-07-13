@@ -130,13 +130,7 @@ class ItemNotaFiscal:
                 "valorItem": self.valorItem}
 
     def str(self):
-        string = "\nId={5} Sequencial={4} Quantidade={3} Produto={2} Valor Unitario={1} Valor Item={0}".format(
-            self.valorItem,
-            self.valorUnitario,
-            self.descricao,
-            self.quantidade,
-            self.sequencial,
-            self.id)
+        string = f"\nId={self.id} Sequencial={self.sequencial} Quantidade={self.quantidade} Produto={self.descricao} Valor Unitario={self.valorUnitario} Valor Item={self.valorItem}"   
         return string
 
     def get_sequencial(self):
