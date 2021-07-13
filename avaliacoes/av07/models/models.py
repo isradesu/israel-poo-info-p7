@@ -17,7 +17,6 @@ class Cliente:
         self.cnpjcpf = cnpjcpf
         self.tipo = tipo
 
-    # Método para retornar os atributos em forma de dict
     def to_json(self):
         return {"id": self.id, "nome": self.nome, "codigo": self.codigo, "cnpjcpf": self.cnpjcpf}
 
