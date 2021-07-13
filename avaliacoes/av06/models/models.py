@@ -9,7 +9,6 @@ class Cliente:
         self.cnpjcpf = cnpjcpf
         self.tipo = tipo
 
-    # Método para retornar os atributos em forma de dict
     def to_json(self):
         return {"id": self.id, "nome": self.nome, "codigo": self.codigo, "cnpjcpf": self.cnpjcpf}
 
@@ -59,12 +58,10 @@ class NotaFiscal:
             self.cliente = cliente
 
     def data_nota(self):
-        lista_data_e_hora = str(self.data).split()  # Separa o resultado de "datetime.datetime.now()" numa lista
-        # com 2 elementos, a data e a hora
-        data_lista = lista_data_e_hora[0].split('-')  # Divide em strings apenas a data, primeiro elemento da lista
-        # acima
-        data_final_nota = f'{data_lista[2]}/{data_lista[1]}/{data_lista[0]}'  # Ordena a data na nossa ordem padrão
-        return data_final_nota  # Retorna a data formatada
+        lista_data_e_hora = str(self.data).split() 
+        data_lista = lista_data_e_hora[0].split('-')
+        data_final_nota = f'{data_lista[2]}/{data_lista[1]}/{data_lista[0]}'  
+        return data_final_nota 
 
     def adicionar_item(self, item):
         self.itens.append(item)
